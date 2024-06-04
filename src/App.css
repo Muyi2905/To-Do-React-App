@@ -1,0 +1,7 @@
+.img {
+    width: 50px; /* Adjust this value to your preferred size */
+    height: 50px; /* Adjust this value to your preferred size */
+    border-radius: 50%; /* This makes the image round */
+    object-fit: cover; /* This ensures the image fills the circle without distortion */
+  }
+  

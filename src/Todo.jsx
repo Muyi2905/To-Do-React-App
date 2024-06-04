@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import benten from './assets/benten.jpg'
 
 const Todo = () => {
   let [tasks, setTasks] = useState(['take a shower', 'play fifa', 'read manwha']);
@@ -17,7 +18,9 @@ const Todo = () => {
   const movetaskdown = () => {};
   return (
     <div className="to-do">
+      <img className="img" src={benten}></img>
       <h1> To-Do List</h1>
+      
       <div>
         <input
           type="text"
@@ -31,6 +34,7 @@ const Todo = () => {
         {tasks.map((task, index)=>
         <li key={index}>
         <span className="text">{task}</span>
+        <button className="delete-buuton" onClick={deleteTask}>Delete Task</button>
         </li>)}
       </ol>
     </div>
