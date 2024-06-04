@@ -3,7 +3,7 @@ import benten from "./assets/benten.jpg";
 
 const Todo = () => {
   let [tasks, setTasks] = useState([
-    "take a shower",
+    "sleep",
     "play fifa",
     "read manwha",
   ]);
@@ -13,8 +13,13 @@ const Todo = () => {
     setnewTasks(event.target.value);
   };
 
-  const addTask = () => {};
+  const addTask = () => {
 
+    if(newTasks.trim() !==""){
+    setTasks(t=>[...t, newTasks])
+    setnewTasks('')
+  };
+  }
   const deleteTask = () => {};
 
   const movetaskup = () => {};
@@ -33,14 +38,14 @@ const Todo = () => {
           value={newTasks}
         />{" "}
         <br></br>
-        <button className="add-button">Add</button>
+        <button onClick={addTask} onclassName="add-button">Add</button>
       </div>
       <ol>
         {tasks.map((task, index) => (
           <li key={index}>
             <span className="text">{task}</span>
             <button className="delete-button" onClick={() => deleteTask(index)}>
-              ❌
+              DELETE
             </button>
             <button className="move-button" onClick={() => movetaskup(index)}>
               ☝️

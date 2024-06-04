@@ -1,16 +1,23 @@
-.to-do-list{
+.to-do-list {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  margin-top: 100px ;
-  
+  margin-top: 100px;
 }
 
-h1{
-  font-size: 4rem;
+.img {
+  width: 200px; /* Adjusted size for better visibility */
+  height: 200px; /* Adjusted size for better visibility */
+  border-radius: 50%; /* This makes the image round */
+  object-fit: cover; /* This ensures the image fills the circle without distortion */
 }
 
-button{
-  font-size: 1.7rem;
+h1 {
+  font-size: 3rem; /* Slightly reduced size for better aesthetics */
+  margin-bottom: 20px;
+}
+
+button {
+  font-size: 1.2rem; /* Reduced size for better aesthetics */
   font-weight: bold;
   padding: 10px 20px;
   border: none;
@@ -18,29 +25,57 @@ button{
   cursor: pointer;
 }
 
-.add-button{
+.add-button {
   margin-top: 12px;
+  padding: 20px 40px;
 }
 
-input[type="text"]{
-  font-size: 1.7rem;
-  color: lightgray;
+input[type="text"] {
+  font-size: 1.2rem; /* Reduced size for better aesthetics */
+  
   border-radius: 5px;
   padding: 10px;
-  border: 2px solid;
+  border: 2px solid lightgray;
+  margin-bottom: 10px;
+  width: 50%;
+  height: 50px;
 }
-.img {
-    width: 50px; /* Adjust this value to your preferred size */
-    height: 50px; /* Adjust this value to your preferred size */
-    border-radius: 50%; /* This makes the image round */
-    object-fit: cover; /* This ensures the image fills the circle without distortion */
-  }
-  
 
-  .delete-button{
-    margin: 7px;
-  }
+ol {
+  padding: 0;
+  list-style-type: none; /* Remove default list styling */
+}
 
-  .move-button{
-    margin: 5px;
-  }
+li {
+  font-size: 1.5rem; /* Reduced size for better aesthetics */
+  font-weight: bold;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 2px solid hsla(0, 0%, 85%, 0.75); /* Reduced border thickness */
+  border-radius: 5px;
+  display: flex; /* Use flexbox for better layout */
+  justify-content: space-between; /* Space out content */
+  align-items: center; /* Center items vertically */
+}
+
+.delete-button {
+  margin-left: 10px;
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.move-button {
+  margin-left: 10px;
+  background-color: #4d79ff;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8; /* Add a hover effect to buttons */
+}
+
+.text {
+  flex-grow: 1; /* Allow the text to take up remaining space */
+  font-size: 2rem;
+  text-transform: capitalize;
+}
