@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import benten from "./assets/benten.jpg";
 
 const Todo = () => {
-  let [tasks, setTasks] = useState([
+  const [tasks, setTasks] = useState([
     "sleep",
     "play fifa",
     "read manwha",
   ]);
-  let [newTasks, setnewTasks] = useState("");
+  const [newTasks, setnewTasks] = useState("");
 
   const handleTask = (event) => {
     setnewTasks(event.target.value);
@@ -20,11 +20,40 @@ const Todo = () => {
     setnewTasks('')
   };
   }
-  const deleteTask = () => {};
+  const deleteTask = (index) => {
+    const updatedTasks = tasks.filter((_, i)=>i !==index)
+    setTasks(updatedTasks)
+  };
 
-  const movetaskup = () => {};
+  const movetaskup = (index) => {
+    if (index === 0) {
+      
+      return;
+    }
+    const updatedTasks = [...tasks];
+    const taskToMove = updatedTasks[index];
+    updatedTasks[index] = updatedTasks[index - 1];
+    updatedTasks[index - 1] = taskToMove;
+    setTasks(updatedTasks);
+  };
+  };
 
-  const movetaskdown = () => {};
+  const movetaskdown = () => {
+    if (index === tasks.length - 1) {
+
+      return;
+    }
+  
+   
+    const updatedTasks = [...tasks];
+    const taskToMove = updatedTasks[index];
+    updatedTasks[index] = updatedTasks[index + 1];
+    updatedTasks[index + 1] = taskToMove;
+  
+   
+    setTasks(updatedTasks);
+    
+  };
   return (
     <div className="to-do-list">
       <img className="img" src={benten}></img>
