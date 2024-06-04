@@ -26,34 +26,10 @@ const Todo = () => {
   };
 
   const movetaskup = (index) => {
-    if (index === 0) {
-      
-      return;
-    }
-    const updatedTasks = [...tasks];
-    const taskToMove = updatedTasks[index];
-    updatedTasks[index] = updatedTasks[index - 1];
-    updatedTasks[index - 1] = taskToMove;
-    setTasks(updatedTasks);
-  };
-  };
-
-  const movetaskdown = () => {
-    if (index === tasks.length - 1) {
-
-      return;
-    }
-  
-   
-    const updatedTasks = [...tasks];
-    const taskToMove = updatedTasks[index];
-    updatedTasks[index] = updatedTasks[index + 1];
-    updatedTasks[index + 1] = taskToMove;
-  
-   
-    setTasks(updatedTasks);
     
   };
+
+  const movetaskdown = () => {};
   return (
     <div className="to-do-list">
       <img className="img" src={benten}></img>
