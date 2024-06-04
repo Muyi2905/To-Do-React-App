@@ -34,7 +34,7 @@ const Todo = () => {
         {tasks.map((task, index)=>
         <li key={index}>
         <span className="text">{task}</span>
-        <button className="delete-buuton" onClick={deleteTask}>Delete Task</button>
+        <button className="delete-buuton" onClick={deleteTask}>❌</button>
         </li>)}
       </ol>
     </div>

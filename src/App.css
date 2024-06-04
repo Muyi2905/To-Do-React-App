@@ -5,3 +5,7 @@
     object-fit: cover; /* This ensures the image fills the circle without distortion */
   }
   
+
+  .delete-button{
+    font-size: 3em;
+  }
